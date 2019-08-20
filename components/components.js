@@ -122,10 +122,19 @@ function OrderListController(){
     ];
 }
 function OrderDetailsController(){
-    this.order = [{
-
-
-    }];
+    this.order = {
+        "order_name": "PAG-G2175 Grids",
+        "org_name": "Palm Aluminum and Glass Inc",
+        "amount": 1355.00,
+        "close_date": "05/28/2019",
+        "sales_stage": "Received",
+        "vendor": "PGT",
+        "order_number": 1446860,
+        "eta": "05/28/2019",
+        "date_received": "05/29/2019",
+        "total": 1470.00,
+        "notes": "BACK ORDERED: LINE 1 QTY 1 SGD770PARTS - RECEIVED 06.26.19"
+    };
 }
 
 newApp.component('tileMetrics', {

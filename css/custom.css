@@ -196,3 +196,20 @@
     height: -webkit-fill-available;
     background-color: var(--background-color);
 }
+.order-details{
+    color: white;
+}
+.detail-header{
+    white-space: nowrap;
+    font-weight: 900;
+}
+.detail-value{
+    font-weight: 400;
+}
+td.detail-header, td.detail-value{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+table.order-details{
+    padding-top: 5%;
+}

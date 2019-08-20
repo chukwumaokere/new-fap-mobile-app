@@ -1,2 +1,101 @@
-<div class="placehold">
+<div class="dark">
+    <table class="order-details table-striped table-dark">
+    <tbody class="">
+        <tr>
+            <td class="detail-header">
+                Order Name: 
+            </td>
+            <td class="detail-value">
+                {{$ctrl.order.order_name}}
+            </td>
+        </tr>
+        <tr>
+            <td class="detail-header">
+                Amount: 
+            </td>
+            <td class="detail-value">
+                {{$ctrl.order.amount | currency}}
+            </td>
+        </tr>
+        <tr>
+            <td class="detail-header">
+                Organization Name :
+            </td>
+            <td class="detail-value">
+                {{$ctrl.order.org_name}}
+            </td>
+        </tr>
+        <tr>
+            <td class="detail-header">
+                Close Date:
+            </td>
+            <td class="detail-value">
+                {{$ctrl.order.close_date}}
+            </td>
+        </tr>
+        <tr>
+            <td class="detail-header">
+                Sales Stage :
+            </td>
+            <td class="detail-value">
+                {{$ctrl.order.sales_stage}}
+            </td>
+        </tr>
+        <tr>
+            <td class="detail-header">
+                Vendor:
+            </td>
+            <td class="detail-value">
+                {{$ctrl.order.vendor}}
+            </td>
+        </tr>
+        <tr>
+            <td class="detail-header">
+                Order Number:
+            </td>
+            <td class="detail-value">
+                {{$ctrl.order.order_number}}
+            </td>
+        </tr>
+        <tr>
+            <td class="detail-header">
+                ETA:
+            </td>
+            <td class="detail-value">
+                {{$ctrl.order.eta}}
+            </td>
+        </tr>
+        <tr>
+            <td class="detail-header">
+                Date Received:
+            </td>
+            <td class="detail-value">
+                {{$ctrl.order.date_received}}
+            </td>
+        </tr>
+        <tr>
+            <td class="detail-header">
+                Total:
+            </td>
+            <td class="detail-value">
+                {{$ctrl.order.total | currency}}
+            </td>
+        </tr>
+        <tr>
+            <td class="detail-header">
+                Notes:
+            </td>
+            <td class="detail-value">
+                {{$ctrl.order.notes}}
+            </td>
+        </tr>
+    </tbody>
+    </table>
+    <div class="item-grid" style="color: white">
+        <p>Item(s) Ordered:</p>
+        &nbsp; &nbsp; &nbsp; This is where the item grid will go
+    </div>
+    <div class="pay-button mx-auto">
+        <button type="button" class="btn btn-success mx-auto">Pay Now</button>
+    </div>
 </div>
