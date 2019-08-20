@@ -1,11 +1,11 @@
 <div class="holder">
-    <a href=".#!/orderdetails?order={{metric.order_no}}" class="row order-list" ng-repeat="metric in $ctrl.metrics" >
+    <a href=".#!/orderdetails?order={{order.order_no}}" class="row order-list" ng-repeat="order in $ctrl.orders" >
             <div class="row order-list-item"> 
                 <div class="col-5">
                     <strong class="bolder">Order #: </strong>
                 </div>
                 <div class="col-6 order-list-value">
-                    {{metric.order_no}} 
+                    {{order.order_no}} 
                 </div>
             </div>
             <div class="row order-list-item"> 
@@ -13,7 +13,7 @@
                     <strong class="bolder">Vendor: </strong> 
                 </div>
                 <div class="col-6 order-list-value">
-                    {{metric.vendor}} 
+                    {{order.vendor}} 
                 </div>
                 <div class="col-1 right-arrow">
                     <i class="fas fa-chevron-right"></i>
@@ -24,7 +24,7 @@
                     <strong class="bolder">Total Value: </strong>
                 </div>
                 <div class="col-6 order-list-value">
-                     {{metric.total | currency}}    
+                     {{order.total | currency}}    
                 </div>
             </div>
     </a>

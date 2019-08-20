@@ -191,3 +191,8 @@
 .right-arrow > .fa-chevron-right{
     color: darkgrey;
 }
+.placehold{
+    max-height: -webkit-fill-available;
+    height: -webkit-fill-available;
+    background-color: var(--background-color);
+}

@@ -77,7 +77,7 @@ function TileListController(){
 }
 
 function OrderListController(){
-    this.metrics = [
+    this.orders = [
         {
             "order_no" : 1446860,
             "vendor": "PGT",
@@ -121,6 +121,12 @@ function OrderListController(){
         }
     ];
 }
+function OrderDetailsController(){
+    this.order = [{
+
+
+    }];
+}
 
 newApp.component('tileMetrics', {
     templateUrl: 'components/tile-metrics.html',
@@ -129,4 +135,8 @@ newApp.component('tileMetrics', {
 newApp.component('orderList', {
     templateUrl: 'components/order-list.html',
     controller: OrderListController,
+});
+newApp.component('orderDetails', {
+    templateUrl: 'components/order-details.html',
+    controller: OrderDetailsController,
 });
