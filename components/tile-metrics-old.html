@@ -1,0 +1,15 @@
+<div class="tile col-6" ng-repeat="metric in $ctrl.metrics">
+    <a href=".#!/{{metric.destination}}">
+    <h1 class="digit g-text text-center">{{metric.quantity}}</h1>
+        <div class="container">
+            <div class="row tile-title">
+                <div class="col-4">
+                    <i class="{{metric.icon}} fa-2x icon g-text"></i>
+                </div>
+                <div class="col-8">
+                    <p class="small-text white-text"> {{metric.description}}</p>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
