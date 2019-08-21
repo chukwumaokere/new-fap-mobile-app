@@ -45,8 +45,8 @@ newApp.run(['$rootScope', function($rootScope){
 newApp.controller('mainController', function($scope){
 	var title = "My FAP Dashboard";
 	var bicon = "fas fa-bars";
-	var action = "openSideNav()";
-    $scope.message = 'Hi there';
+	var action = "openSideNav";
+    $scope.message = 'This is the dashboard/home view';
 	$scope.title = title;
 	$scope.bicon = bicon;
 	$scope.action = action;
@@ -55,8 +55,8 @@ newApp.controller('mainController', function($scope){
 newApp.controller('ordersController', function($scope){
 	var title = "Orders List";
 	var bicon = "fas fa-chevron-left";
-	var action = "goBack()";
-    $scope.message = 'Hi there';
+	var action = "goBack";
+    $scope.message = 'This is the orders list view';
 	$scope.title = title;
 	$scope.bicon = bicon;
 	$scope.action = action;
@@ -65,8 +65,8 @@ newApp.controller('ordersController', function($scope){
 newApp.controller('paymentsController', function($scope){
 	var title = "Payments List";
 	var bicon = "fas fa-chevron-left";
-	var action = "goBack()";
-    $scope.message = 'Hi there';
+	var action = "goBack";
+    $scope.message = 'This is the payments list view';
 	$scope.title = title;
 	$scope.bicon = bicon;
 	$scope.action = action;
@@ -75,8 +75,8 @@ newApp.controller('paymentsController', function($scope){
 newApp.controller('loginController', function($scope){
 	var title = "Login";
 	var bicon = "fas fa-chevron-left";
-	var action = "goBack()";
-	$scope.message = "This is the login";
+	var action = "goBack";
+	$scope.message = "This is the login view";
 	$scope.title = title;
 	$scope.bicon = bicon;
 	$scope.action = action;
@@ -85,8 +85,8 @@ newApp.controller('loginController', function($scope){
 newApp.controller('orderDetailsController', function($scope){
     var title = "Order Details";
     var bicon = "fas fa-chevron-left";
-    var action = "goBack()";
-    $scope.message = "This is the login";
+    var action = "goBack";
+    $scope.message = "This is the order detail view";
     $scope.title = title;
     $scope.bicon = bicon;
     $scope.action = action;

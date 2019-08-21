@@ -24,7 +24,7 @@
 		<nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top navbar-custom">
 		    <div class="container-fluid header-wrapper">
 			<div class="navbar-wrapper text-center">
-			    <a onClick = "openSideNav()" ng-on-click="openSideNav()"><i class="{{title.bicon}} {{title.test}} fa-2x icon white-text"></i></a>
+				<a  onClick="Nav()" action="{{title.action}}" id="Nav"><i class="{{title.bicon}} {{title.test}} fa-2x icon white-text"></i></a>
 			    <div class="navbar-brand"> {{title.name}} </div>
 			    <a onClick="window.location.reload();"> <i class="fas fa-sync-alt fa-2x icon white-text"></i> </a>
 			</div>
@@ -33,11 +33,11 @@
 
 		<div id="sidenav" class="sidenav" style="width: 0px">
 		  <a onClick = "closeSideNav();" class="hamburg"><i class="fas fa-bars fa-2x icon white-text"></i></a>
-		  <a class="big-text" href="#!/orders">Orders</a>
+		  <a onClick = "closeSideNav();" class="big-text" href="#!/orders">Orders</a>
 		  <a class="big-text" href="#">Payments</a>
 		  <a class="big-text" href="#">Tickets</a>
 		  <a class="big-text" href="#">Profile</a>
-		  <a class="big-text" href="#!/login">Logout</a>
+		  <a onClick="logout();" class="big-text" href="">Logout</a>
 		</div>
 
 		<div ng-view id="main"></div>
@@ -45,9 +45,9 @@
 		<nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-bottom navbar-custom">
 		    <div class="container-fluid header-wrapper">
 			<div class="navbar-wrapper text-center">
-				<i class="fas fa-phone fa-2x icon white-text circle-icon"></i>
+				<a onClick="callSupport();"><i class="fas fa-phone fa-2x icon white-text circle-icon"></i></a>
 				<a onClick="goHome();"><i class="fas fa-home fa-2x icon white-text circle-icon"></i></a>
-			    <i class="fas fa-ticket-alt fa-2x icon white-text circle-icon"></i>
+			    <a onClick="createTicket();"><i class="fas fa-ticket-alt fa-2x icon white-text circle-icon"></i></a>
 			</div>
 		    </div>
 		</nav>
