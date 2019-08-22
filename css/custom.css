@@ -174,7 +174,8 @@
     border-bottom: 1px solid #000000;
 }
 .dark{
-    background-color: var(--background-color);
+	background-color: var(--background-color);
+	flex-grow: 1;
 }
 .order-list-item{
     max-width: 100%;
@@ -215,4 +216,42 @@ table.order-details{
 }
 .pay-button{
 	text-align: center;
+}
+.search-bar-container{
+	display: flex;
+	/*max-width:100%;*/
+}
+.sort-button{
+	padding: 0 14%;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+.fill-full{
+	display: flex;
+	flex-flow: column;
+	height: 100%;
+}
+.fill-full-inner{
+	flex-grow: 1;
+}
+.inner-button{
+	display:flex;
+}
+.search-bar-input-container {
+	width: 80%;
+}
+.search-bar-sort-container {
+	width: 20%;
+}
+.search-input{
+	width: 100%;
+}
+input[type=search]{
+	width: 100%;
+	padding: 2%;
+	padding-left: 5%;
+}
+a.order-list:hover{
+	color: white;
 }
