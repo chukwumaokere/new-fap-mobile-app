@@ -98,7 +98,7 @@
 .fpa{
 	min-height: -webkit-fill-available;
 }
-.fixed-top{
+.fixed-top, .fixed-bottom{
 	z-index: 1035;
 }
 .overlay{
@@ -223,8 +223,9 @@ table.order-details{
 }
 .sort-button{
 	padding: 0 14%;
-    margin: 0;
-    height: 100%;
+	border-radius: 0;
+	margin: 0;
+	height: 100%;
     width: 100%;
 }
 .fill-full{
@@ -245,6 +246,7 @@ table.order-details{
 	width: 20%;
 }
 .search-input{
+	border: 0;
 	width: 100%;
 }
 input[type=search]{
@@ -255,3 +257,30 @@ input[type=search]{
 a.order-list:hover{
 	color: white;
 }
+.vt-item-grid{
+	width: 120%;
+}
+.item-grid-container{
+	overflow-x: scroll;
+}
+#main.ng-enter, #main.ng-leave {
+	transition: all .66s cubic-bezier(.10, .70, .10, 1);
+	-webkit-transition: all .66s cubic-bezier(.10, .70, .10, 1);
+	-moz-transition: all .66s cubic-bezier(.10, .70, .10, 1);
+}
+#main.ng-leave.ng-leave-active.back  {
+	transform: translate3d(100%, 0, 0);
+	-webkit-transform: translate3d(100%, 0, 0);
+}
+#main.ng-leave.ng-leave-active {
+	transform: translate3d(-100%, 0, 0);
+	-webkit-transform: translate3d(-100%, 0, 0);
+}
+/*
+#main.back.ng-enter {
+	-webkit-transform: translate3d(100%, 0, 0) !important;
+}
+#main.back.ng-leave.ng-leave-active {
+	-webkit-transform: translate3d(100%, 0, 0) !important;
+}
+*/
