@@ -7,8 +7,6 @@ function Nav(){
 	}else{
 		$("#main").addClass("back");
 		window.history.back();
-		//TODO: hide ng-enter and ng-enter-active
-		//console.log($('#main.ng-enter.ng-enter-active'));
 	}
 }
 function closeSideNav(){
@@ -33,7 +31,7 @@ function goHome(){
 	window.location.href=".#/";
 }
 function callSupport(){
-	window.location.href='tel:17733072549';
+	window.location.href='tel://17733072549';
 	//TODO: find method that works on native android
 }
 function createTicket(){
