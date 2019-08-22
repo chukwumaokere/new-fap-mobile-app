@@ -260,8 +260,13 @@ a.order-list:hover{
 .vt-item-grid{
 	width: 120%;
 }
+.item-grid{
+	padding-top: 5%;
+	padding-left: 5%;
+}
 .item-grid-container{
 	overflow-x: scroll;
+	padding: 2% 0%;
 }
 #main.ng-enter, #main.ng-leave {
 	transition: all .66s cubic-bezier(.10, .70, .10, 1);
