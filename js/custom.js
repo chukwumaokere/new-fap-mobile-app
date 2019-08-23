@@ -56,8 +56,56 @@ function createTicket(){
 		backdrop: 'static'
 	})
  }
+ document.addEventListener("DOMContentLoaded", () => {
+	const carousels = document.getElementsByClassName("tile-carousel");
+	window.onload = function(){
+		console.log('page ready');
+		console.log(carousels);
+		setTimeout(function(){
+			Array.from(carousels).forEach(function(element, index, array){
+				console.log(element + ' ' + index);
+				var maxScrollLeft = element.scrollWidth - element.clientWidth;
+				console.log(maxScrollLeft);
+				element.addEventListener('scroll', function(event){
+					var el = $(event.target);
+					if (el.is('div.tile-carousel')){
+						//console.log('scrolling' + ' ' + index);
+						el.scroll(function(){
+							var arrow_left = element.getElementsByTagName('div')[0];
+							var arrow_right = element.getElementsByTagName('div')[1];
+							var arrow_left_currently_showing = arrow_left.hasAttribute('hidden')? false : true;
+							var arrow_right_currently_showing = arrow_right.hasAttribute('hidden') ? false : true;
+							//console.log()
+							if(el.scrollLeft() > 40 ){
+								if (!arrow_left_currently_showing){
+									arrow_left.removeAttribute('hidden')
+								}
+							}
+							if(el.scrollLeft() <= 40){
+								if (arrow_left_currently_showing){
+									arrow_left.setAttribute('hidden',true);
+								}
+							}
+							if(el.scrollLeft() >= maxScrollLeft - 20){
+								if(arrow_right_currently_showing){
+									arrow_right.setAttribute('hidden', true);
+								}
+							}
+							if(el.scrollLeft() <= maxScrollLeft - 20){
+								if(!arrow_right_currently_showing){
+									arrow_right.removeAttribute('hidden');
+								}
+							}
+						})
+					}
+				})
+			});
+		}, 250)
+	}
+  });
 
 document.onreadystatechange = function(){
+	/*
 	var state = document.readyState;
 	if (state == 'complete'){
 		console.log('fully ready');
@@ -66,7 +114,8 @@ document.onreadystatechange = function(){
 		Array.from(carousels).forEach(function(element, index, array){
 			console.log(element + ' ' + index);
 		});
-		
+		*/
+		/*
 		[].forEach.call(carousels, function(carousel){ //Doesnt always seem to bind? 
 			console.log(carousel); 
 			carousel.addEventListener('scroll', function(event){
@@ -78,6 +127,7 @@ document.onreadystatechange = function(){
 		});
 		
 	}
+	*/
 }
 /*
  document.onreadystatechange = function(){
