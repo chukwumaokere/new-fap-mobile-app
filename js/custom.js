@@ -57,6 +57,29 @@ function createTicket(){
 	})
  }
 
+document.onreadystatechange = function(){
+	var state = document.readyState;
+	if (state == 'complete'){
+		console.log('fully ready');
+		const carousels = document.getElementsByClassName("tile-carousel");
+		console.log(carousels);
+		Array.from(carousels).forEach(function(element, index, array){
+			console.log(element + ' ' + index);
+		});
+		
+		[].forEach.call(carousels, function(carousel){ //Doesnt always seem to bind? 
+			console.log(carousel); 
+			carousel.addEventListener('scroll', function(event){
+				var el = $(event.target);
+				if(el.is('div.tile-carousel')){
+					console.log('scrolling');
+				}
+			}, true);
+		});
+		
+	}
+}
+/*
  document.onreadystatechange = function(){
 	 var state = document.readyState;
 	 if (state == 'complete'){
@@ -75,12 +98,15 @@ function createTicket(){
 		});
 	 }
  }
+ */
+ /*
  document.addEventListener('DOMContentLoaded', function(){
 	console.log("ready as i'll ever be");
  });
  $('document').ready(function(){
 	 console.log('ready via jquery');
  });
+ */
  /*
 Array.from(carousels).forEach((carousel)=> {
 	carousel.scroll(function(){
