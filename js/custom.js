@@ -78,25 +78,17 @@ function createTicket(){
 							var arrow_left_currently_showing = arrow_left.hasAttribute('hidden')? false : true;
 							var arrow_right_currently_showing = arrow_right.hasAttribute('hidden') ? false : true;
 							//console.log()
-							if(el.scrollLeft() > 40 ){
-								if (!arrow_left_currently_showing){
-									arrow_left.removeAttribute('hidden')
-								}
+							if(el.scrollLeft() > 40 && !arrow_left_currently_showing ){
+								arrow_left.removeAttribute('hidden')
 							}
-							if(el.scrollLeft() <= 40){
-								if (arrow_left_currently_showing){
-									arrow_left.setAttribute('hidden',true);
-								}
+							if(el.scrollLeft() <= 40 && arrow_left_currently_showing){
+								arrow_left.setAttribute('hidden',true);
 							}
-							if(el.scrollLeft() >= maxScrollLeft - 20){
-								if(arrow_right_currently_showing){
-									arrow_right.setAttribute('hidden', true);
-								}
+							if(el.scrollLeft() >= maxScrollLeft - 20 && arrow_right_currently_showing){
+								arrow_right.setAttribute('hidden', true);
 							}
-							if(el.scrollLeft() <= maxScrollLeft - 20){
-								if(!arrow_right_currently_showing){
-									arrow_right.removeAttribute('hidden');
-								}
+							if(el.scrollLeft() <= maxScrollLeft - 20 && !arrow_right_currently_showing){
+								arrow_right.removeAttribute('hidden');
 							}
 						})
 					}
