@@ -56,3 +56,59 @@ function createTicket(){
 		backdrop: 'static'
 	})
  }
+
+ document.onreadystatechange = function(){
+	 var state = document.readyState;
+	 if (state == 'complete'){
+		 console.log("fully ready");
+		 var lastScrollLeft = 0;
+		 var carousels = document.getElementsByClassName("tile-carousel");
+		 console.log(carousels);
+		 [].forEach.call(carousels, function(carousel){	
+			console.log(carousel);
+			carousel.scroll(function(){
+				var documentScrollLeft = carousel.scrollLeft(); 
+				if (lastScrollLeft != documentScrollLeft){
+					console.log('scrolling carousel ');
+				}
+			})
+		});
+	 }
+ }
+ document.addEventListener('DOMContentLoaded', function(){
+	console.log("ready as i'll ever be");
+ });
+ $('document').ready(function(){
+	 console.log('ready via jquery');
+ });
+ /*
+Array.from(carousels).forEach((carousel)=> {
+	carousel.scroll(function(){
+		var documentScrollLeft = carousel.scrollLeft(); 
+		if (lastScrollLeft != documentScrollLeft){
+			console.log('scrolling carousel ');
+		}
+	})
+})
+*/
+/*
+ carouselHolder.forEach(carousel => {
+	var lastScrollLeft = 0;
+	carousel.scroll(function(){
+		var documentScrollLeft = carousel.scrollLeft(); 
+		if (lastScrollLeft != documentScrollLeft){
+			console.log('scrolling carousel ' + documentScrollLeft);
+		}
+	})
+});	 
+*/
+ /*
+ var lastScrollLeft = 0;
+$('#t-c').scroll(function() {
+    var documentScrollLeft = $('#t-c').scrollLeft();
+    if (lastScrollLeft != documentScrollLeft) {
+        console.log('scroll x');
+        lastScrollLeft = documentScrollLeft;
+    }
+});
+*/

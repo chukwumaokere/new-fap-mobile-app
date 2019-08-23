@@ -37,6 +37,7 @@
 .tile-carousel {
 	overflow-x: auto;
 	white-space: nowrap;
+	align-items: center;
 }
 .tile-carousel >  .tile.col-6, .tile-carousel > .tile-accent.col-6  {
 	display: inline-block;
@@ -281,11 +282,30 @@ a.order-list:hover{
 	transform: translate3d(-100%, 0, 0);
 	-webkit-transform: translate3d(-100%, 0, 0);
 }
-/*
-#main.back.ng-enter {
-	-webkit-transform: translate3d(100%, 0, 0) !important;
+.hover-arrows{
+	position: absolute;
+	z-index: 10;
+	color: white;
+	padding: 0% 3%;
 }
-#main.back.ng-leave.ng-leave-active {
-	-webkit-transform: translate3d(100%, 0, 0) !important;
+.arrow-right{
+	right: 0;
 }
-*/
+.arrow-left{
+	left: 0;
+}
+@keyframes pulsate {
+	from {
+		opacity: .3;
+	}
+	to { 
+		opacity: .9;
+	}
+}
+
+.hover-arrows{
+	animation-duration: 0.7s;
+	animation-name: pulsate;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
