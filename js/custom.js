@@ -46,6 +46,7 @@ function createTicket(){
  $('#exampleModal').on('show.bs.modal', function (event) {
 	var modal = $(this)
 	modal.find('.modal-title').text('New Ticket')
+	document.getElementById('message-text').value="";
  })
 
  function submitTicket(){
