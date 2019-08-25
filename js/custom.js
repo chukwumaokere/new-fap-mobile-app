@@ -71,7 +71,7 @@ $('div.overlay').on('click', function(e){
 	}
 	//Arrow on tiles function
 	if (carousels){
-		console.log(carousels);
+		//console.log(carousels);
 		setTimeout(function(){
 			Array.from(carousels).forEach(function(element, index, array){
 				//console.log(element + ' ' + index);

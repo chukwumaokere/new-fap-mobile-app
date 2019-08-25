@@ -158,13 +158,15 @@ div#main{
 	position: absolute;
 	top: 0;
 	bottom: 0;
+	left: 0;
+	right: 0;
 	display: block;
 	z-index: 1036;
 	background: rgba(0,0,0,100);
 	background-image: url('../assets/bg.jpg');
 	background-size: cover;
 	filter: blur(3px);
-	transform: scale(1.1);
+	/* transform: scale(1.1); */
 
 }
 .login-box{
