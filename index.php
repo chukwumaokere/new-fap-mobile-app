@@ -35,9 +35,9 @@
 		<div id="sidenav" class="sidenav" style="width: 0px">
 		  <a onClick = "closeSideNav();" class="hamburg"><i class="fas fa-bars fa-2x icon white-text"></i></a>
 		  <a onClick = "closeSideNav();" class="big-text" href="#!/orders">Orders</a>
-		  <a class="big-text" href="#">Payments</a>
-		  <a class="big-text" href="#">Tickets</a>
-		  <a class="big-text" href="#">Profile</a>
+		  <a onClick = "closeSideNav();" class="big-text" href="#!/payments">Payments</a>
+		  <a onClick = "closeSideNav();" class="big-text" href="#!/tickets">Tickets</a>
+		  <a onClick = "closeSideNav();" class="big-text" href="#!/profile">Profile</a>
 		  <a onClick="logout();" class="big-text" href="">Logout</a>
 		</div>
 

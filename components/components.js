@@ -38,17 +38,17 @@ function TileListController(){
                     quantity: 3,
                     icon: 'far fa-envelope-open',
                     description: 'Pending Requests',
-                    destination: 'orders'
+                    destination: 'payments'
                 }, {
                     quantity: 6,
                     icon: 'fas fa-inbox',
                     description: 'Payments Received',
-                    destination: 'orders',
+                    destination: 'payments',
                 }, {
                     quantity: 4,
                     icon: 'far fa-calendar-check',
                     description: 'Payments Made',
-                    destination: 'orders',
+                    destination: 'payments',
                 }
             ]
         },
@@ -59,17 +59,17 @@ function TileListController(){
                     quantity: 9,
                     icon: 'fas fa-ticket-alt',
                     description: 'New Tickets',
-                    destination: 'orders'
+                    destination: 'tickets'
                 }, {
                     quantity: 5,
                     icon: 'fas fa-clock',
                     description: 'Pending Tickets',
-                    destination: 'orders',
+                    destination: 'tickets',
                 }, {
                     quantity: 12,
                     icon: 'fas fa-clipboard',
                     description: 'Tickets Closed',
-                    destination: 'orders',
+                    destination: 'tickets',
                 }
             ]
         }

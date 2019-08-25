@@ -22,6 +22,11 @@ newApp.config(function($routeProvider) {
 		controller: 'loginController',
 		title: 'Login'
 	})
+	.when('/tickets', {
+		templateUrl: 'pages/tickets.html',
+		controller: 'ticketsController',
+		title: 'Tickets List'
+	})
     .when('/orderdetails', {
                 templateUrl: 'pages/orderdetails.html',
                 controller: 'orderDetailsController',
@@ -67,6 +72,16 @@ newApp.controller('paymentsController', function($scope){
 	var bicon = "fas fa-chevron-left";
 	var action = "goBack";
     $scope.message = 'This is the payments list view';
+	$scope.title = title;
+	$scope.bicon = bicon;
+	$scope.action = action;
+	$scope.changeTitle(title, bicon, action);
+});
+newApp.controller('ticketsController', function($scope){
+	var title = "Tickets List";
+	var bicon = "fas fa-chevron-left";
+	var action = "goBack";
+    $scope.message = 'This is the tickets list view';
 	$scope.title = title;
 	$scope.bicon = bicon;
 	$scope.action = action;

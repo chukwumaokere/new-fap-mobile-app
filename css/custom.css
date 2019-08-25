@@ -6,6 +6,18 @@
 	--background-color: #342F44;
 	--background-headers: #252332;
 	--button-dark: #1A1724;
+	--nav-bar-space: calc(72px + calc(calc(.02698550 * 100vw)*2));
+}
+body{
+	background-color: var(--secondary-color);
+}
+div#main{	
+	padding-bottom: calc(72px + calc(calc(.02698550 * 100vw)*2));
+	background-color: var(--secdonary-color); 
+}
+.empty{
+	background-color: var(--secondary-color);
+	height: calc((100vh - var(--nav-bar-space)) - var(--nav-bar-space));
 }
 .btn-rounded{
 	border-radius: 50px;
@@ -80,6 +92,7 @@
 .navbar.fixed-bottom{
 	padding-top: 2.7%;
 	background-color: var(--secondary-color);
+	position: fixed !important;
 }
 .navbar-custom.fixed-top > .header-wrapper > .navbar-wrapper{
     text-align-last: justify;

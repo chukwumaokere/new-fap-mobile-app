@@ -57,13 +57,16 @@ function createTicket(){
 		backdrop: 'static'
 	})
  }
-
+ document.getElementsByTagName('body')[0].addEventListener('readystatechange', () => console.log('readyState:' + document.readyState));
+ $('body').on("domChanged", function(){
+	 console.log('something changed');
+ })
  //Arrow on tiles function
  document.addEventListener("DOMContentLoaded", () => {
 	const carousels = document.getElementsByClassName("tile-carousel");
 	window.onload = function(){
-		//console.log('page ready');
-		//console.log(carousels);
+		console.log('page ready');
+		console.log(carousels);
 		setTimeout(function(){
 			Array.from(carousels).forEach(function(element, index, array){
 				//console.log(element + ' ' + index);
