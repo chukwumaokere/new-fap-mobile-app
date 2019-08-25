@@ -42,6 +42,9 @@ function createTicket(){
 		
 	})
 }
+$('div.overlay').on('click', function(e){
+	closeSideNav();
+});
 
  $('#exampleModal').on('show.bs.modal', function (event) {
 	var modal = $(this)
@@ -66,59 +69,8 @@ function createTicket(){
 	}catch{
 		var carousels = false;
 	}
+	//Arrow on tiles function
 	if (carousels){
-			console.log(carousels);
-			setTimeout(function(){
-				Array.from(carousels).forEach(function(element, index, array){
-					//console.log(element + ' ' + index);
-					var maxScrollLeft = element.scrollWidth - element.clientWidth;
-					//console.log(maxScrollLeft);
-					element.addEventListener('scroll', function(event){
-						var el = $(event.target);
-						if (el.is('div.tile-carousel')){
-							//console.log('scrolling' + ' ' + index);
-							el.scroll(function(){
-								var arrow_left = element.getElementsByTagName('div')[0];
-								var arrow_right = element.getElementsByTagName('div')[1];
-								var arrow_left_currently_showing = arrow_left.hasAttribute('hidden')? false : true;
-								var arrow_right_currently_showing = arrow_right.hasAttribute('hidden') ? false : true;
-								//console.log()
-								if(el.scrollLeft() > 40 && !arrow_left_currently_showing ){
-									arrow_left.removeAttribute('hidden')
-								}
-								if(el.scrollLeft() <= 40 && arrow_left_currently_showing){
-									arrow_left.setAttribute('hidden',true);
-								}
-								if(el.scrollLeft() >= maxScrollLeft - 20 && arrow_right_currently_showing){
-									arrow_right.setAttribute('hidden', true);
-								}
-								if(el.scrollLeft() <= maxScrollLeft - 20 && !arrow_right_currently_showing){
-									arrow_right.removeAttribute('hidden');
-								}
-							})
-						}
-					})
-				});
-			}, 250) //TODO: Use promises/resolutions or asynchronus functions instead of timeout in the future for reliability
-	}
-    // ...
-});
-observer.observe(document, {
-	subtree: true,
-	attributes: true
-	//...
-  });
-
- document.getElementsByTagName('body')[0].addEventListener('readystatechange', () => console.log('readyState:' + document.readyState));
- $('body').on("domChanged", function(){
-	 console.log('something changed');
- })
- //Arrow on tiles function
- /*
- document.addEventListener("DOMContentLoaded", () => {
-	const carousels = document.getElementsByClassName("tile-carousel");
-	window.onload = function(){
-		console.log('page ready');
 		console.log(carousels);
 		setTimeout(function(){
 			Array.from(carousels).forEach(function(element, index, array){
@@ -154,4 +106,7 @@ observer.observe(document, {
 		}, 250) //TODO: Use promises/resolutions or asynchronus functions instead of timeout in the future for reliability
 	}
 });
-*/
+observer.observe(document, {
+	subtree: true,
+	attributes: true
+});
