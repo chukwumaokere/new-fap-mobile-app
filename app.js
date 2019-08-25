@@ -12,15 +12,20 @@ newApp.config(function($routeProvider) {
 				controller: 'ordersController',
 		title: 'Orders List'
         })
-        .when('/payments', {
-                templateUrl: 'pages/payments.html',
-                controller: 'paymentsController',
-		title: 'Payments List'
-        })
+	.when('/payments', {
+			templateUrl: 'pages/payments.html',
+			controller: 'paymentsController',
+	title: 'Payments List'
+	})
 	.when('/login', {
 		templateUrl: 'pages/login.html',
 		controller: 'loginController',
 		title: 'Login'
+	})
+	.when('/profile', {
+		templateUrl: 'pages/profile.html',
+		controller: 'profileController',
+		title: 'Profile'
 	})
 	.when('/tickets', {
 		templateUrl: 'pages/tickets.html',
@@ -106,4 +111,14 @@ newApp.controller('orderDetailsController', function($scope){
     $scope.bicon = bicon;
     $scope.action = action;
     $scope.changeTitle(title, bicon, action);
+});
+newApp.controller('profileController', function($scope){
+	var title = "Profile";
+	var bicon = "fas fa-chevron-left";
+	var action = "goBack";
+	$scope.message = "This is the profile view";
+	$scope.title = title;
+	$scope.bicon = bicon;
+	$scope.action = action;
+	$scope.changeTitle(title, bicon, action);
 });

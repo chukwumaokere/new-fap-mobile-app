@@ -13,7 +13,7 @@ body{
 }
 div#main{	
 	padding-bottom: calc(72px + calc(calc(.02698550 * 100vw)*2));
-	background-color: var(--secdonary-color); 
+	background-color: var(--background-headers); 
 }
 .empty{
 	background-color: var(--secondary-color);
