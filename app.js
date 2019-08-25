@@ -63,8 +63,11 @@ newApp.controller('mainController', function($scope){
 	$scope.changeTitle(title, bicon, action);
 });
 newApp.controller('ordersController', function($scope, $routeParams){
-	//var title = "Orders List";
-	var title = $routeParams.filtername;
+	if ($routeParams.filtername){
+		var title = $routeParams.filtername;
+	}else{
+		var title = "All Orders";
+	}
 	var bicon = "fas fa-chevron-left";
 	var action = "goBack";
     $scope.message = 'This is the orders list view';
@@ -74,8 +77,11 @@ newApp.controller('ordersController', function($scope, $routeParams){
 	$scope.changeTitle(title, bicon, action);
 });
 newApp.controller('paymentsController', function($scope, $routeParams){
-	//var title = "Payments List";
-	var title = $routeParams.filtername;
+	if ($routeParams.filtername){
+		var title = $routeParams.filtername;
+	}else{
+		var title = "All Payments";
+	}
 	var bicon = "fas fa-chevron-left";
 	var action = "goBack";
     $scope.message = 'This is the payments list view';
@@ -85,8 +91,11 @@ newApp.controller('paymentsController', function($scope, $routeParams){
 	$scope.changeTitle(title, bicon, action);
 });
 newApp.controller('ticketsController', function($scope, $routeParams){
-	//var title = "Tickets List";
-	var title = $routeParams.filtername;
+	if ($routeParams.filtername){
+		var title = $routeParams.filtername;
+	}else{
+		var title = "All Tickets";
+	}
 	var bicon = "fas fa-chevron-left";
 	var action = "goBack";
     $scope.message = 'This is the tickets list view';
