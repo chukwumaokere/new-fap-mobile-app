@@ -8,7 +8,7 @@
         <div class="hover-arrows arrow-left my-auto" hidden ><i class="fas fa-chevron-left fa-2x"></i></div>
         <div class="hover-arrows arrow-right my-auto"><i class="fas fa-chevron-right fa-2x"></i></div>
         <div class="tile col-6" ng-repeat="data in metric.data">
-            <a href=".#!/{{data.destination}}">
+            <a href=".#!/{{data.destination}}?filtername={{data.description}}">
             <h1 class="digit g-text text-center">{{data.quantity}}</h1>
                 <div class="container">
                     <div class="row tile-title">

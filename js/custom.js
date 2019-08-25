@@ -3,7 +3,7 @@ function Nav(){
 	if (action == 'openSideNav'){
 		$("#overlay").toggle();
 		document.getElementById("sidenav").style.paddingLeft = "5.5%";
-		document.getElementById("sidenav").style.width = "60%";
+		document.getElementById("sidenav").style.width = "80%";
 	}else{
 		$("#main").addClass("back");
 		window.history.back();

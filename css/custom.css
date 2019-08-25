@@ -322,6 +322,6 @@ a.order-list:hover{
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
 }
-.hover-arrows.arrow-left{
-
+.vertical-align{
+	align-items: center;
 }

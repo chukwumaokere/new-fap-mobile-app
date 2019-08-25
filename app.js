@@ -62,8 +62,9 @@ newApp.controller('mainController', function($scope){
 	$scope.action = action;
 	$scope.changeTitle(title, bicon, action);
 });
-newApp.controller('ordersController', function($scope){
-	var title = "Orders List";
+newApp.controller('ordersController', function($scope, $routeParams){
+	//var title = "Orders List";
+	var title = $routeParams.filtername;
 	var bicon = "fas fa-chevron-left";
 	var action = "goBack";
     $scope.message = 'This is the orders list view';
@@ -102,8 +103,8 @@ newApp.controller('loginController', function($scope){
 	$scope.action = action;
 	$scope.changeTitle(title, bicon, action);
 });
-newApp.controller('orderDetailsController', function($scope){
-    var title = "Order Details";
+newApp.controller('orderDetailsController', function($scope, $routeParams){
+    var title = "Order Details ("  + $routeParams.order + ")";
     var bicon = "fas fa-chevron-left";
     var action = "goBack";
     $scope.message = "This is the order detail view";

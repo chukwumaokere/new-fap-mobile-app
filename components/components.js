@@ -136,6 +136,16 @@ function OrderDetailsController(){
         "notes": "BACK ORDERED: LINE 1 QTY 1 SGD770PARTS - RECEIVED 06.26.19"
     };
 }
+function ProfileController(){
+    this.profile_details = {
+        "firstname": "Chuck",
+        "lastname": "Okere",
+        "email1": "cokere@boruapps.com",
+        "phone1": "+1 (773) 307-2548",
+        "account_id": "Boru Inc.",
+        "theme": "Dark"
+    }
+}
 
 newApp.component('tileMetrics', {
     templateUrl: 'components/tile-metrics.html',
@@ -148,4 +158,8 @@ newApp.component('orderList', {
 newApp.component('orderDetails', {
     templateUrl: 'components/order-details.html',
     controller: OrderDetailsController,
+});
+newApp.component('profile', {
+    templateUrl: 'components/profile.html',
+    controller: ProfileController,
 });
