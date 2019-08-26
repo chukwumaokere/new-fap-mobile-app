@@ -107,8 +107,10 @@ $('div.overlay').on('click', function(e){
 	}
 	if ($("div.navbar-brand").html().trim() == "Profile" ){
 		$("nav.navbar.fixed-top").css("box-shadow", "none");
+		//$("div#main").css("background-color", "var(--background-color)");
 	}else{
 		$("nav.navbar.fixed-top").css("box-shadow", " 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12)");
+		//$("div#main").css("background-color", "var(--background-headers)");
 	}
 });
 observer.observe(document, {

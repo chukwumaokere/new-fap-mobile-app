@@ -331,7 +331,8 @@ a.order-list:hover{
 }
 .edit-profile-button{
 	text-align: center;
-	padding: 6% 0;
+	padding-top: 6%;
+	padding-bottom: 2%;
 }
 .profile-detail{
 	border-bottom: 2px solid var(--secondary-color);
