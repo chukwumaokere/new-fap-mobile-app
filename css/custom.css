@@ -351,13 +351,14 @@ a.order-list:hover{
     border-bottom-right-radius: 100% 200%;
     background: var(--background-headers);
     display: inline-block;
-	position: absolute;
+	position: fixed;
 	z-index: 1;
 	box-shadow:  0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
 }
 .profile-top-secton{
-	position: relative;
+	position: fixed;
 	z-index: 2;
+	width: 100%;
 }
 .modal-content{
 	background-color: var(--background-color);

@@ -4,7 +4,7 @@
         <i class="fas fa-6x fa-user-circle"></i>
     </div>
 
-    <div class="row profile-detail vertical-align">
+    <div class="row profile-detail vertical-align" style="padding-top: 25%">
         <div class="col-3 center-h"><i class="fas fa-2x fa-address-card"></i></div>
         <div class="col-8 profile-detail-value">{{$ctrl.profile_details.firstname}} {{$ctrl.profile_details.lastname}}</div>
     </div>
@@ -22,7 +22,8 @@
     </div>
     <div class="row profile-detail vertical-align">
         <div class="col-3 center-h"><i class="fas fa-2x fa-palette"></i></div>
-        <div class="col-8 profile-detail-value">{{$ctrl.profile_details.theme}}</div>
+
+        <div class="col-8 profile-detail-value"><button onClick="swapTheme()" type="button" class="btn btn-dark">{{$ctrl.profile_details.theme}}</button></div>
     </div>
     <div class="edit-profile-button mx-auto">
             <button onClick="editProfile()" type="button" class="btn btn-info mx-auto">Edit Profile</button>
