@@ -105,6 +105,11 @@ $('div.overlay').on('click', function(e){
 			});
 		}, 250) //TODO: Use promises/resolutions or asynchronus functions instead of timeout in the future for reliability
 	}
+	if ($("div.navbar-brand").html().trim() == "Profile" ){
+		$("nav.navbar.fixed-top").css("box-shadow", "none");
+	}else{
+		$("nav.navbar.fixed-top").css("box-shadow", " 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12)");
+	}
 });
 observer.observe(document, {
 	subtree: true,

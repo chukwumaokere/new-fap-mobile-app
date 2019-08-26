@@ -317,7 +317,6 @@ a.order-list:hover{
 		opacity: .9;
 	}
 }
-
 .hover-arrows{
 	animation-duration: 0.7s;
 	animation-name: pulsate;
@@ -326,4 +325,31 @@ a.order-list:hover{
 }
 .vertical-align{
 	align-items: center;
+}
+.center-h{
+	text-align: center;
+}
+.edit-profile-button{
+	text-align: center;
+	padding: 6% 0;
+}
+.profile-detail{
+	border-bottom: 2px solid var(--secondary-color);
+	padding: 3% 0px;
+}
+.profile-holder{
+
+}
+.row.profile-detail{
+	margin-left: 0;
+	margin-right: 0;
+}
+.half-circle{
+	height: 7%;
+    width: 100%;
+    border-bottom-left-radius: 100% 200%;
+    border-bottom-right-radius: 100% 200%;
+    background: var(--background-headers);
+    display: inline-block;
+    position: absolute;
 }

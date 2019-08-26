@@ -142,7 +142,7 @@ function ProfileController(){
         "lastname": "Okere",
         "email1": "cokere@boruapps.com",
         "phone1": "+1 (773) 307-2548",
-        "account_id": "Boru Inc.",
+        "account_id": "Boru, Inc.",
         "theme": "Dark"
     }
 }
