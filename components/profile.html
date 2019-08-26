@@ -6,25 +6,25 @@
 
     <div class="row profile-detail vertical-align">
         <div class="col-3 center-h"><i class="fas fa-2x fa-address-card"></i></div>
-        <div class="col-8">{{$ctrl.profile_details.firstname}} {{$ctrl.profile_details.lastname}}</div>
+        <div class="col-8 profile-detail-value">{{$ctrl.profile_details.firstname}} {{$ctrl.profile_details.lastname}}</div>
     </div>
     <div class="row profile-detail vertical-align">
         <div class="col-3 center-h"><i class="far fa-2x fa-envelope"></i></div>
-        <div class="col-8">{{$ctrl.profile_details.email1}}</div>
+        <div class="col-8 profile-detail-value">{{$ctrl.profile_details.email1}}</div>
     </div>
     <div class="row profile-detail vertical-align">
         <div class="col-3 center-h"><i class="fas fa-2x fa-mobile-alt"></i></div>
-        <div class="col-8">{{$ctrl.profile_details.phone1}}</div>
+        <div class="col-8 profile-detail-value">{{$ctrl.profile_details.phone1}}</div>
     </div>
     <div class="row profile-detail vertical-align">
         <div class="col-3 center-h"><i class="far fa-2x fa-building"></i></div>
-        <div class="col-8">{{$ctrl.profile_details.account_id}}</div>
+        <div class="col-8 profile-detail-value">{{$ctrl.profile_details.account_id}}</div>
     </div>
     <div class="row profile-detail vertical-align">
         <div class="col-3 center-h"><i class="fas fa-2x fa-palette"></i></div>
-        <div class="col-8">{{$ctrl.profile_details.theme}}</div>
+        <div class="col-8 profile-detail-value">{{$ctrl.profile_details.theme}}</div>
     </div>
     <div class="edit-profile-button mx-auto">
-            <button type="button" class="btn btn-info mx-auto">Edit Profile</button>
+            <button onClick="editProfile()" type="button" class="btn btn-info mx-auto">Edit Profile</button>
     </div>
 </div>

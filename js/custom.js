@@ -61,6 +61,13 @@ $('div.overlay').on('click', function(e){
 	})
  }
 
+ function payOrder(){
+	 console.log('show pay now modal');
+ }
+ function editProfile(){
+	 console.log('show edit profile modal or transition to edit boxes');
+ }
+
  var observer = new MutationObserver(function(mutations, observer) {
     // fired when a mutation occurs
 	//console.log(mutations, observer);

@@ -38,7 +38,6 @@ div#main{
 	font-size: 4rem;
 }
 
-
 .heading-dark{
 	background-color: var(--background-color);
 	color: white;
@@ -352,5 +351,21 @@ a.order-list:hover{
     border-bottom-right-radius: 100% 200%;
     background: var(--background-headers);
     display: inline-block;
-    position: absolute;
+	position: absolute;
+	z-index: 1;
+	box-shadow:  0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+.profile-top-secton{
+	position: relative;
+	z-index: 2;
+}
+.modal-content{
+	background-color: var(--background-color);
+	color: white;
+}
+button.close{
+	color: white;
+}
+.profile-detail-value{
+	font-weight: 400;
 }
