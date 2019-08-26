@@ -370,3 +370,6 @@ button.close{
 .profile-detail-value{
 	font-weight: 400;
 }
+#defaultForm-email, #defaultForm-pass{
+	color: white;
+}
