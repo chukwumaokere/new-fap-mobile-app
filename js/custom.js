@@ -73,8 +73,12 @@ $('div.overlay').on('click', function(e){
 	//console.log(mutations, observer);
 	try {
 		var carousels = document.getElementsByClassName("tile-carousel");
+		var Tiles = document.getElementsByClassName('tile');
+		var Order_List = document.getElementsByClassName('order-list');
 	}catch{
 		var carousels = false;
+		var Tiles = false;
+		var Order_List = false;
 	}
 	//Arrow on tiles function
 	if (carousels){
@@ -112,6 +116,29 @@ $('div.overlay').on('click', function(e){
 			});
 		}, 250) //TODO: Use promises/resolutions or asynchronus functions instead of timeout in the future for reliability
 	}
+	//Tile triggering Loading Anim
+	if (Tiles && Tiles.length > 0){
+		for (var i = 0; i < Tiles.length ; i++){
+			Tiles[i].addEventListener('click', function(e){
+				if($('loading-spinner').hasClass('hide')){
+					$('loading-spinner').removeClass('hide');
+					$('loading-spinner').addClass('show');
+				}
+			})
+		}
+	}
+	if (Order_List && Order_List.length > 0){
+		for (var i = 0; i < Order_List.length ; i++){
+			Order_List[i].addEventListener('click', function(e){
+				if($('loading-spinner').hasClass('hide')){
+					$('loading-spinner').removeClass('hide');
+					$('loading-spinner').addClass('show');
+				}
+			})
+		}
+	}
+
+	//Styling for header bar on Profile screen
 	if ($("div.navbar-brand").html().trim() == "Profile" ){
 		$("nav.navbar.fixed-top").css("box-shadow", "none");
 		//$("div#main").css("background-color", "var(--background-color)");
@@ -119,34 +146,24 @@ $('div.overlay').on('click', function(e){
 		$("nav.navbar.fixed-top").css("box-shadow", " 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12)");
 		//$("div#main").css("background-color", "var(--background-headers)");
 	}
+
+	//Removing Loading Anim
 	setTimeout(function(){
 		if($('loading-spinner').hasClass('show')){
-			console.log('say no more');
 			$('loading-spinner').removeClass('show');
 			$('loading-spinner').addClass('hide');
 		}
-		console.log("we ready fam");
 	}, 1500);
 });
 observer.observe(document, {
 	subtree: true,
 	attributes: true
 });
-window.onload = function(){
-	
-}
+
+//Anchor link triggering Loading Anim
 var Anchors = document.getElementsByTagName('a');
 for (var i = 0; i < Anchors.length ; i++){
 	Anchors[i].addEventListener('click', function(){
-		if($('loading-spinner').hasClass('hide')){
-			$('loading-spinner').removeClass('hide');
-			$('loading-spinner').addClass('show');
-		}
-	})
-}
-var Tiles = document.getElementsByClassName('tile');
-for (var i = 0; i < Tiles.length ; i++){
-	Tiles[i].addEventListener('click', function(){
 		if($('loading-spinner').hasClass('hide')){
 			$('loading-spinner').removeClass('hide');
 			$('loading-spinner').addClass('show');
