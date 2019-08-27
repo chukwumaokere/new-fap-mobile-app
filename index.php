@@ -40,9 +40,9 @@
 		  <a onClick = "closeSideNav();" class="big-text" href="#!/profile">Profile</a>
 		  <a onClick="logout();" class="big-text" href="">Logout</a>
 		</div>
-
+		<loading-spinner class="show"></loading-spinner>
 		<div ng-view id="main"></div>
-
+		
 		<nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-bottom navbar-custom">
 		    <div class="container-fluid header-wrapper">
 			<div class="navbar-wrapper text-center">

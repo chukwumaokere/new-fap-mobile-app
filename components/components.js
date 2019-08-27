@@ -147,6 +147,10 @@ function ProfileController(){
     }
 }
 
+function SpinnerController(){
+    this.loading = false;
+}
+
 newApp.component('tileMetrics', {
     templateUrl: 'components/tile-metrics.html',
     controller: TileListController,
@@ -163,3 +167,7 @@ newApp.component('profile', {
     templateUrl: 'components/profile.html',
     controller: ProfileController,
 });
+newApp.component('loadingSpinner', {
+    templateUrl: 'components/loading-spinner.html',
+    controller: SpinnerController,
+})

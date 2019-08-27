@@ -124,3 +124,13 @@ observer.observe(document, {
 	subtree: true,
 	attributes: true
 });
+window.onload = function(){
+	setTimeout(function(){
+		if($('loading-spinner').hasClass('show')){
+			console.log('say no more');
+			$('loading-spinner').removeClass('show');
+			$('loading-spinner').addClass('hide');
+		}
+		console.log("we ready fam");
+	}, 1500)
+}
