@@ -119,12 +119,6 @@ $('div.overlay').on('click', function(e){
 		$("nav.navbar.fixed-top").css("box-shadow", " 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12)");
 		//$("div#main").css("background-color", "var(--background-headers)");
 	}
-});
-observer.observe(document, {
-	subtree: true,
-	attributes: true
-});
-window.onload = function(){
 	setTimeout(function(){
 		if($('loading-spinner').hasClass('show')){
 			console.log('say no more');
@@ -132,5 +126,30 @@ window.onload = function(){
 			$('loading-spinner').addClass('hide');
 		}
 		console.log("we ready fam");
-	}, 1500)
+	}, 1500);
+});
+observer.observe(document, {
+	subtree: true,
+	attributes: true
+});
+window.onload = function(){
+	
+}
+var Anchors = document.getElementsByTagName('a');
+for (var i = 0; i < Anchors.length ; i++){
+	Anchors[i].addEventListener('click', function(){
+		if($('loading-spinner').hasClass('hide')){
+			$('loading-spinner').removeClass('hide');
+			$('loading-spinner').addClass('show');
+		}
+	})
+}
+var Tiles = document.getElementsByClassName('tile');
+for (var i = 0; i < Tiles.length ; i++){
+	Tiles[i].addEventListener('click', function(){
+		if($('loading-spinner').hasClass('hide')){
+			$('loading-spinner').removeClass('hide');
+			$('loading-spinner').addClass('show');
+		}
+	})
 }

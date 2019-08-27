@@ -414,7 +414,7 @@ button.close{
   }
 loading-spinner{
 	
-	position: absolute; 
+	position: fixed; 
 	text-align: center;
 	z-index: 100;
 	width: 100%;
