@@ -76,63 +76,88 @@ function TileListController(){
     ];
 }
 
-function OrderListController(){
+function OrderListController(order = ''){
     this.orders = [
         {
             "order_no" : 1446860,
             "vendor": "PGT",
+            "subtotal": 1337.00,
             "total": 1470.00
         }, {
             "order_no" : 1446911,
             "vendor": "VROOM",
+            "subtotal": 3189.37,
             "total": 3241.00
         }, {
             "order_no" : 1406777,
             "vendor": "PGT",
+            "subtotal": 6244.54,
             "total": 6653.00
         }, {
             "order_no" : 1436987,
             "vendor": "All American Windows",
+            "subtotal": 8989.73,
             "total": 9678.00
         }, {
             "order_no" : 1428565,
             "vendor": "AAW",
+            "subtotal": 3875.00,
             "total": 4537.00
         }, {
             "order_no" : 1425885,
             "vendor": "Florida Aluminum Products",
+            "subtotal": 1211.60,
             "total": 1437.00
         }, {
             "order_no" : 1409867,
             "vendor": "VROOM",
+            "subtotal": 7689.63,
             "total": 9875.00
         }, {
             "order_no" : 1423468,
             "vendor": "PGT",
+            "subtotal": 2988.00,
             "total": 3457.00
         }, {
             "order_no" : 1498756,
             "vendor": "VROOM",
+            "subtotal": 5675.00,
             "total": 6783.00
         }, {
             "order_no" : 1490763,
             "vendor": "Pacific Gulf Trade",
+            "subtotal": 2855.00,
             "total": 3434.00
         }
     ];
+    //Attempt at getting order details 
+    this.getOrder = function(order){
+        var result = this.orders.filter(orderVal => {
+            return orderVal.order_no == order;
+        })
+        return result;
+    }
+    //Attempt at getting order details 
 }
-function OrderDetailsController(){
+
+var orderlistdetail = new OrderListController;
+
+function OrderDetailsController($routeParams){
+    //Attempt at getting order details 
+    var ord = orderlistdetail.getOrder($routeParams.order);
+    var order_info = ord[0];
+    //Attempt at getting order details 
     this.order = {
         "order_name": "PAG-G2175 Grids",
         "org_name": "Palm Aluminum and Glass Inc",
-        "amount": 1355.00,
+        "amount": order_info.subtotal,
         "close_date": "05/28/2019",
         "sales_stage": "Received",
-        "vendor": "PGT",
-        "order_number": 1446860,
+        "vendor": order_info.vendor,
+        "order_number": order_info.order_no,
         "eta": "05/28/2019",
         "date_received": "05/29/2019",
-        "total": 1470.00,
+        "total": order_info.total,
         "notes": "BACK ORDERED: LINE 1 QTY 1 SGD770PARTS - RECEIVED 06.26.19"
     };
 }
