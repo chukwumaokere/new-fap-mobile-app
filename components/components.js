@@ -4,9 +4,15 @@ function TileListController(){
             "title" : "Orders",
             "data" : [
                 {
+                    quantity: 6,
+                    icon: 'far fa-hourglass',
+                    description: 'Orders Pending',
+                    destination: 'orders',
+                },
+                {
                     quantity: 8,
                     icon: 'fas fa-route',
-                    description: 'Orders In Transit',
+                    description: 'Orders In Process',
                     destination: 'orders'
                 }, {
                     quantity: 12,
@@ -17,11 +23,6 @@ function TileListController(){
                     quantity: 4,
                     icon: 'far fa-check-square',
                     description: 'Orders Completed',
-                    destination: 'orders',
-                }, {
-                    quantity: 6,
-                    icon: 'far fa-hourglass',
-                    description: 'Orders Pending',
                     destination: 'orders',
                 }, {
                     quantity: 1,
@@ -36,39 +37,46 @@ function TileListController(){
             "data": [
                 {
                     quantity: 3,
-                    icon: 'far fa-envelope-open',
-                    description: 'Pending Requests',
+                    icon: 'fas fa-inbox',
+                    description: 'Pending Invoices',
                     destination: 'payments'
                 }, {
-                    quantity: 6,
-                    icon: 'fas fa-inbox',
-                    description: 'Payments Received',
+                    quantity: 2,
+                    icon: 'far fa-envelope-open',
+                    description: 'Payments Past Due',
                     destination: 'payments',
-                }, {
-                    quantity: 4,
+                },
+                {
+                    quantity: 6,
                     icon: 'far fa-calendar-check',
+                    description: 'Last 30 Days',
+                    destination: 'payments',
+                },
+                {
+                    quantity: 10,
+                    icon: 'fas fa-vote-yea',
                     description: 'Payments Made',
                     destination: 'payments',
                 }
             ]
         },
         {
-            "title": "Trouble Tickets",
+            "title": "Service Tickets",
             "data": [
                 {
-                    quantity: 9,
+                    quantity: 1,
                     icon: 'fas fa-ticket-alt',
                     description: 'New Tickets',
                     destination: 'tickets'
                 }, {
                     quantity: 5,
                     icon: 'fas fa-clock',
-                    description: 'Pending Tickets',
+                    description: 'Need Your Attention',
                     destination: 'tickets',
                 }, {
                     quantity: 12,
                     icon: 'fas fa-clipboard',
-                    description: 'Tickets Closed',
+                    description: 'Closed Tickets',
                     destination: 'tickets',
                 }
             ]
