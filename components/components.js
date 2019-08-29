@@ -64,15 +64,15 @@ function TileListController(){
             "title": "Service Tickets",
             "data": [
                 {
-                    quantity: 1,
-                    icon: 'fas fa-ticket-alt',
-                    description: 'New Tickets',
-                    destination: 'tickets'
-                }, {
                     quantity: 5,
                     icon: 'fas fa-clock',
                     description: 'Need Your Attention',
                     destination: 'tickets',
+                }, {
+                    quantity: 1,
+                    icon: 'fas fa-ticket-alt',
+                    description: 'New Tickets',
+                    destination: 'tickets'
                 }, {
                     quantity: 12,
                     icon: 'fas fa-clipboard',
