@@ -138,6 +138,16 @@ $('div.overlay').on('click', function(e){
 		}
 	}
 
+	if($("div.navbar-brand").html().trim().includes('Orders')){
+		$('.search-input').on('keyup', function(){
+			var value= $(this).val().toLowerCase();
+			$('div > a.order-list').filter(function(){
+				$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+			})
+		})
+		//div > a.order-list
+	}
+
 	//Styling for header bar on Profile screen
 	if ($("div.navbar-brand").html().trim() == "Profile" ){
 		$("nav.navbar.fixed-top").css("box-shadow", "none");
