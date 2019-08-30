@@ -30,7 +30,7 @@ newApp.config(function($routeProvider) {
 	.when('/tickets', {
 		templateUrl: 'pages/tickets.html',
 		controller: 'ticketsController',
-		title: 'Tickets List'
+		title: 'Service Tickets List'
 	})
 	.when('/help', {
 		templateUrl: 'pages/help.html',
@@ -99,7 +99,7 @@ newApp.controller('ticketsController', function($scope, $routeParams){
 	if ($routeParams.filtername){
 		var title = $routeParams.filtername;
 	}else{
-		var title = "All Tickets";
+		var title = "All Service Tickets";
 	}
 	var bicon = "fas fa-chevron-left";
 	var action = "goBack";

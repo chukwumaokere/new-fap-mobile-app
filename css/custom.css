@@ -427,3 +427,20 @@ loading-spinner.show{
 loading-spinner.hide{
 	display: none;
 }
+.bg-main{
+	background-color: var(--background-color);
+	padding-bottom: 3%;
+}
+li > h6 {
+	font-weight: 900;
+}
+li > b {
+	font-weight: 500;
+}
+.circle-icon-sm {
+    background: var(--background-headers);
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}

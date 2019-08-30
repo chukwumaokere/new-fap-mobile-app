@@ -36,7 +36,7 @@
 		  <a onClick = "closeSideNav();" class="hamburg"><i class="fas fa-bars fa-2x icon white-text"></i></a>
 		  <a onClick = "closeSideNav();" class="big-text" href="#!/orders">Orders</a>
 		  <a onClick = "closeSideNav();" class="big-text" href="#!/payments">Payments</a>
-		  <a onClick = "closeSideNav();" class="big-text" href="#!/tickets">Tickets</a>
+		  <a onClick = "closeSideNav();" class="big-text" href="#!/tickets">Service Tickets</a>
 		  <a onClick = "closeSideNav();" class="big-text" href="#!/profile">Profile</a>
 		  <a onClick = "closeSideNav();" class="big-text" href="#!/help">Help</a>
 		  <a onClick="logout();" class="big-text" href="">Logout</a>
