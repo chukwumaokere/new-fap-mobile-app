@@ -31,7 +31,7 @@ function goHome(){
 	window.location.href=".#/";
 }
 function callSupport(){
-	window.location.href='tel://17733072549';
+	window.location.href='tel:17733072549';
 	//TODO: find method that works on native android
 }
 function createTicket(){
