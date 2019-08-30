@@ -444,3 +444,6 @@ li > b {
     text-align: center;
     vertical-align: middle;
 }
+.circle-icon-sm-extra{
+	padding: 10px 12px;
+}
