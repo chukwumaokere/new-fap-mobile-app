@@ -67,6 +67,9 @@ $('div.overlay').on('click', function(e){
  function editProfile(){
 	 console.log('show edit profile modal or transition to edit boxes');
  }
+ function openNotifications(){
+	 window.location.href=".#!/notifications";
+ }
 
  var observer = new MutationObserver(function(mutations, observer) {
     // fired when a mutation occurs

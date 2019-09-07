@@ -447,3 +447,60 @@ li > b {
 .circle-icon-sm-extra{
 	padding: 10px 12px;
 }
+notification-button{
+    position: fixed;
+    z-index: 11;
+    bottom: 100px;
+    right: 0;
+}
+.btn-floating{
+	box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+    position: relative;
+    z-index: 1;
+    vertical-align: middle;
+    display: inline-block;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+    margin: 10px;
+    border-radius: 50%;
+    padding: 0;
+    cursor: pointer;
+    width: 47px;
+	height: 47px;
+}
+
+.notification-list{
+    display: block;
+    padding: 3%;
+    padding-left: 10%;
+    background-color: var(--dark);
+    color: white;
+    border-bottom: 1px solid #000000;
+}
+.notification-list.read-true{
+	background-color: #0e161f;
+	color: white;
+}
+.notification-list.read-false{
+	 background-color: #465a92;
+	 color: white;
+}
+.notification-list-item{
+    max-width: 100%;
+}
+@keyframes flashingNotification {
+	from {
+		background-color: #ffa000; 
+		/* opacity: .3; */
+	}
+	to { 
+		 background-color: #ff3547; 
+		/* opacity: 1;*/
+	}
+}
+.flashing-notification{
+	animation-duration: 0.667s;
+	animation-name: flashingNotification;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}

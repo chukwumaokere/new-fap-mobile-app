@@ -37,6 +37,11 @@ newApp.config(function($routeProvider) {
 		controller: 'helpController',
 		title: 'Help'
 	})
+	.when('/notifications', {
+		templateUrl: 'pages/notifications.html',
+		controller: 'notificationController',
+		title: 'Notifications'
+	})
     .when('/orderdetails', {
                 templateUrl: 'pages/orderdetails.html',
                 controller: 'orderDetailsController',
@@ -144,6 +149,16 @@ newApp.controller('helpController', function($scope){
 	var bicon = "fas fa-chevron-left";
 	var action = "goBack";
 	$scope.message = "This is the help view";
+	$scope.title = title;
+	$scope.bicon = bicon;
+	$scope.action = action;
+	$scope.changeTitle(title, bicon, action);
+});
+newApp.controller('notificationController', function($scope){
+	var title = "Notifications";
+	var bicon = "fas fa-chevron-left";
+	var action = "goBack";
+	$scope.message = "This is the notifications view";
 	$scope.title = title;
 	$scope.bicon = bicon;
 	$scope.action = action;

@@ -183,6 +183,56 @@ function ProfileController(){
 function SpinnerController(){
     this.loading = false;
 }
+function NotificationController(){
+    this.notifications = [
+        {
+            notification: 'New Pending Invoice — 0124667',
+            date: '2019-09-07 12:32PM EST',
+            read: true,
+        },
+        {
+            notification: 'New Pending Invoice — 0124577',
+            date: '2019-09-06 01:21PM EST',
+            read: false,
+        },
+        {
+            notification: 'Service Ticket Created — 1214451',
+            date: '2019-09-05 02:45PM EST',
+            read: true,
+        },
+        {
+            notification: 'Ticket Needs Your Attention — 212155',
+            date: '2019-09-04 11:32AM EST',
+            read: true,
+        },
+        {
+            notification: 'Payment Past Due — 0123444',
+            date: '2019-09-03 10:10AM EST',
+            read: false,
+        },
+        {
+            notification: 'Payment Past Due — 0123444',
+            date: '2019-09-02 10:10AM EST',
+            read: false,
+        },
+        {
+            notification: 'Payment Past Due — 0123444',
+            date: '2019-09-01 10:10AM EST',
+            read: false,
+        },
+        {
+            notification: 'Order Cancelled — 1355458',
+            date: '2019-08-31 01:10AM EST',
+            read: true,
+        },
+        {
+            notification: 'Ticket Needs Your Attention  — 0123444',
+            date: '2019-08-30 10:10AM EST',
+            read: false,
+        },
+    ];
+    this.new_notification = true;
+}
 
 newApp.component('tileMetrics', {
     templateUrl: 'components/tile-metrics.html',
@@ -203,4 +253,12 @@ newApp.component('profile', {
 newApp.component('loadingSpinner', {
     templateUrl: 'components/loading-spinner.html',
     controller: SpinnerController,
-})
+});
+newApp.component('notificationButton', {
+    templateUrl: 'components/notification-button.html',
+    controller: NotificationController,
+});
+newApp.component('notificationList', {
+    templateUrl: 'components/notification-list.html',
+    controller: NotificationController,
+});
