@@ -231,7 +231,7 @@ function NotificationController(){
             read: false,
         },
     ];
-    this.new_notification = true;
+    this.new_notification = false;
 }
 
 newApp.component('tileMetrics', {

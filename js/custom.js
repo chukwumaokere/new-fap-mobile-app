@@ -151,6 +151,20 @@ $('div.overlay').on('click', function(e){
 		//div > a.order-list
 	}
 
+	//Show no content error when page empty
+	if($("#main > div").hasClass("empty")){
+		var obj = $("#main > div");
+		var no_content_error;
+		if(!obj[0].innerHTML.includes('There are no avaialble records')){
+			$('.no-content').remove();
+			var no_content_error = '<div class="white-text no-content"> There are no available records. <br> Please refresh or try again later.</div>';
+		}else{
+			var no_content_error = '';
+		}
+		$("#main > div.container.empty").append(no_content_error);
+		
+	};
+
 	//Styling for header bar on Profile screen
 	if ($("div.navbar-brand").html().trim() == "Profile" ){
 		$("nav.navbar.fixed-top").css("box-shadow", "none");
