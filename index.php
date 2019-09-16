@@ -18,6 +18,11 @@
 		<!-- App scripts -->
 		<script src="app.js"></script>
 		<script src="components/components.js"></script>
+        <script type="text/javascript">
+            function displayMsg(){
+                Print.postMessage("callSupport");
+            }
+        </script>
 
 	</head>
 	<body >
@@ -49,7 +54,7 @@
 		<nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-bottom navbar-custom">
 		    <div class="container-fluid header-wrapper">
 			<div class="navbar-wrapper text-center">
-				<a href="#" onClick="callSupport()"><i class="fas fa-phone fa-2x fa-flip-horizontal icon white-text circle-icon"></i></a>
+				<a onClick="displayMsg()"><i class="fas fa-phone fa-2x fa-flip-horizontal icon white-text circle-icon"></i></a>
 				<a onClick="goHome();"><i class="fas fa-home fa-2x icon white-text circle-icon"></i></a>
 			    <a onClick="createTicket();" data-toggle="modal" data-whatever="@mdo"><i class="fas fa-ticket-alt fa-2x icon white-text circle-icon"></i></a>
 			</div>
