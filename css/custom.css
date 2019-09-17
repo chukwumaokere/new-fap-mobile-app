@@ -504,3 +504,8 @@ notification-button{
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
 }
+
+.navbar-wrapper.text-center{
+display:flex !important;
+justify-content:space-between !important;
+}
